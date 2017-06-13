@@ -16,14 +16,15 @@ public class IsUnique {
     public static void main(String[] args) {
         int[][] b={{1,2,0},{3,4,34},{0,6,43}};
         int[][] d=RotateMatrix(b);
-        for(int i=0;i<d.length;++i){
-            for(int j=0; j<d[0].length;++j)
-                System.out.print(d[i][j]+"  ");
-            System.out.println("");
-            }
-        System.out.println(RotateMatrix(b));
-//        int a = 'A';
-//        System.out.println(a + "  " + Character.getNumericValue(a));
+//        for(int i=0;i<d.length;++i){
+//            for(int j=0; j<d[0].length;++j)
+//                System.out.print(d[i][j]+"  ");
+//            System.out.println("");
+//            }
+        System.out.println(strToInt("-324"));
+//        int a = '0';
+//        char c='5';
+//        System.out.println(a + "  " + Character.getNumericValue(a)+"  "+ (c-'0') );
 
     }
 
@@ -193,5 +194,21 @@ public class IsUnique {
 		}
 	}
 	return a;
+}
+    
+    public static int strToInt(String str){
+	int len=str.length();
+	boolean isNeg=false;
+	int result=0;
+	for(int i=0;i<len;++i){
+		if(str.charAt(i)=='-')
+			isNeg=true;
+		else{
+			result=result*10+(str.charAt(i)-'0');
+		}
+	}
+	if(isNeg)
+		return -result;
+	else return result;
 }
 }
