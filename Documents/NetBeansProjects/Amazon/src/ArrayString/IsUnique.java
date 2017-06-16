@@ -21,7 +21,7 @@ public class IsUnique {
 //                System.out.print(d[i][j]+"  ");
 //            System.out.println("");
 //            }
-        System.out.println(strToInt("-324"));
+        System.out.println(intToStr(-120));
 //        int a = '0';
 //        char c='5';
 //        System.out.println(a + "  " + Character.getNumericValue(a)+"  "+ (c-'0') );
@@ -210,5 +210,30 @@ public class IsUnique {
 	if(isNeg)
 		return -result;
 	else return result;
+}
+    
+    public static String intToStr(int num){
+
+	char[] temp=new char[10];
+	int i=-1;
+        StringBuilder sb=new StringBuilder();
+ 
+	if(num<0){
+                ++i;
+                num=-num;
+                sb.append('-');
+        }
+	while(num!=0){
+		temp[++i]= (char)(num%10 +'0');
+		num=num/10;
+	}
+        
+	
+	
+	for(int c=i;c>=0;--c)
+		sb.append(temp[c]);
+	
+	return sb.toString();	
+		
 }
 }
