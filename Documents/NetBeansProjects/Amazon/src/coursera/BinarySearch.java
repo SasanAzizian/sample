@@ -14,6 +14,11 @@ public class BinarySearch <E>{
     
     public void contains(E tofind){
         TreeSet<E> tree=new TreeSet<>();
+        Queue<TreeSet<E>> q=new LinkedList<>();
+        while(!q.isEmpty()){
+            tree=q.remove();
+            
+        }
         
       
     }
