@@ -24,7 +24,7 @@ public class ArrayTest {
       int[] array=new int[cap];
       System.out.println("Enter "+cap+"integer value:\r");
       for(int i=0;i<array.length;++i){
-          array[i]=s.nextInt();
+          array[i]=s.nextInt(); 
       }
       return array;
   }
